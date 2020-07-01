@@ -1,0 +1,13 @@
+log.info("**********This is a sample test********");
+String resultCode = prev.getResponseCode();
+String TestStatus = "FAIL";
+log.info(resultCode);
+log.info(TestStatus);
+
+if(!resultCode.equals("200"))
+{
+	TestStatus = "PASS";
+	log.info("**********I am inside if statement********");	
+	log.info(TestStatus);
+	org.apache.jmeter.engine.StandardJMeterEngine.stopThread(Thread.currentThread().getName());	
+}

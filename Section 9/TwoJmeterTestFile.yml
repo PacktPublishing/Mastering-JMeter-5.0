@@ -1,0 +1,11 @@
+---
+execution:
+- scenario: simple1
+- scenario: simple2
+
+scenarios:
+  simple1:
+   script: Random-RandomOrder.jmx
+  simple2:
+   script: RuntimeController.jmx
+   

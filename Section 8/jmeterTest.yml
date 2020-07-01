@@ -1,0 +1,6 @@
+execution:
+- scenario: simple
+
+scenarios:
+  simple:
+    script: Random-RandomOrder.jmx

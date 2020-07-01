@@ -1,0 +1,17 @@
+log.info("**********This is a sample test********");
+String res = prev.getResponseCode();
+String TestStatus = "FAIL";
+log.info(res);
+log.info(TestStatus);
+
+if(res=="200"){
+	TestStatus = "PASS";
+	log.info("**********I am inside if statement********");	
+	log.info(TestStatus);
+
+	f = new FileOutputStream("D:/Projects/jmeter/apache-jmeter-5.2.1/bin/PostProcessorOutput.csv", true);
+	p = new PrintStream(f);
+	this.interpreter.setOut(p);
+	print("Test status is," + TestStatus);
+	f.close();
+}
